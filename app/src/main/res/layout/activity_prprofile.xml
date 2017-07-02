@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.enchanter21.socialdating.prprofile">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        app:civ_border_color="#EEEEEE"
+        app:civ_border_width="4dp"
+        app:civ_shadow="false"
+        app:civ_shadow_radius="10"
+        app:civ_shadow_color="#8BC34A"
+        android:src="@drawable/imge1"
+        />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:id="@+id/numb"
+        android:textSize="17sp"
+        android:hint="Change number"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="60dp"
+        />
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:id="@+id/gend"
+        android:hint="Gender"
+        android:textSize="17sp"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="60dp"
+        />
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/dist"
+        android:text="Distance"
+        android:textSize="20sp"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="60dp"
+        />
+
+    <com.appyvet.rangebar.RangeBar
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rangebar"
+        android:layout_width="300dp"
+        android:layout_height="72dp"
+        custom:tickStart="5"
+        custom:tickInterval="1"
+        custom:tickEnd="10"
+
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="290dp"
+        />
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:id="@+id/age"
+        android:text="Age limit"
+        android:textSize="20sp"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="60dp"
+        />
+
+    <com.appyvet.rangebar.RangeBar
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rangebarage"
+        android:layout_width="300dp"
+        android:layout_height="72dp"
+        custom:tickStart="5"
+        custom:tickInterval="1"
+        custom:tickEnd="10"
+
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="360dp"
+        />
+    <Button
+        android:id="@+id/bt_go"
+        android:background="@drawable/bt_shape"
+        android:stateListAnimator="@drawable/state_list_animator_z"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="change"
+        android:textColor="#d3d3d3"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="100dp"
+
+        >
+    </Button>
+
+</RelativeLayout>
