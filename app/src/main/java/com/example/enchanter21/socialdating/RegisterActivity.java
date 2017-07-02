@@ -162,7 +162,6 @@ public class RegisterActivity extends AppCompatActivity {
                 fab.setImageResource(R.drawable.plus);
                 RegisterActivity.super.onBackPressed();
             }
-
             @Override
             public void onAnimationStart(Animator animation) {
                 super.onAnimationStart(animation);
