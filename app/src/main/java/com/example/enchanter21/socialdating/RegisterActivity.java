@@ -194,13 +194,13 @@ public class RegisterActivity extends AppCompatActivity {
                         String age1=users.getString("age2");
                         Intent intent1=new Intent(RegisterActivity.this,Homenav.class);
 
-                        intent1.putExtra("nameds3",nameds1);
-                        intent1.putExtra("passds3",passds1);
-                        intent1.putExtra("uuid3",uuid1);
-                        intent1.putExtra("phno3",phno1);
-                        intent1.putExtra("gend3",gend1);
-                        intent1.putExtra("age3",age1);
-                        intent1.putExtra("detas3",detas1);
+//                        intent1.putExtra("nameds3",nameds1);
+//                        intent1.putExtra("passds3",passds1);
+//                        intent1.putExtra("uuid3",uuid1);
+//                        intent1.putExtra("phno3",phno1);
+//                        intent1.putExtra("gend3",gend1);
+//                        intent1.putExtra("age3",age1);
+//                        intent1.putExtra("detas3",detas1);
                         startActivity(intent1);
 //                        makeText(getApplicationContext(),"Welcome\t\t"+nameds1,Toast.LENGTH_SHORT).show();
                         //JSONObject users = jObj.getJSONObject("user_det");
@@ -226,12 +226,12 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> uandme=new HashMap<String, String>();
-                uandme.put("nameds4",ssname);
-                uandme.put("passds4",sspass);
-                uandme.put("phno4",ssphn);
-                uandme.put("gend4",ssgend);
-                uandme.put("age4",ssage);
-                uandme.put("detas4",ssdets);
+                uandme.put("ur_name",ssname);
+                uandme.put("ur_pwwd",sspass);
+                uandme.put("ur_mobno",ssphn);
+                uandme.put("ur_gender",ssgend);
+                uandme.put("ur_age",ssage);
+                uandme.put("other_details",ssdets);
                 return uandme;
             }
         };

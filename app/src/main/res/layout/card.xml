@@ -20,7 +20,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
 
-        android:src="@drawable/and"
+        android:src="@drawable/imge1"
 
         />
 </android.support.v7.widget.CardView>
