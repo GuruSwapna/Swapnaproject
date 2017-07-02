@@ -74,8 +74,7 @@ public class Signin extends AppCompatActivity {
                 getWindow().setExitTransition(explode);
                 getWindow().setEnterTransition(explode);
                 ActivityOptionsCompat oc2 = ActivityOptionsCompat.makeSceneTransitionAnimation(this);
-//                Intent i2 = new Intent(this,LoginSuccessActivity.class);
-//         ed1       startActivity(i2, oc2.toBundle());
+
 
                 sphone=etUsername.getText().toString();
                 spass=etPassword.getText().toString();

@@ -7,18 +7,14 @@ import android.os.Parcelable;
  * Created by enchanter21 on 2/7/17.
  */
 
-public class frndslist implements Parcelable {
-
+public class frndslist  implements Parcelable{
     String sno;
     String ur_name;
-    String ur_image;
     String other_details;
-
 
     protected frndslist(Parcel in) {
         sno = in.readString();
         ur_name = in.readString();
-        ur_image = in.readString();
         other_details = in.readString();
     }
 
@@ -33,19 +29,6 @@ public class frndslist implements Parcelable {
             return new frndslist[size];
         }
     };
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(sno);
-        parcel.writeString(ur_name);
-        parcel.writeString(ur_image);
-        parcel.writeString(other_details);
-    }
 
     public String getSno() {
         return sno;
@@ -63,19 +46,23 @@ public class frndslist implements Parcelable {
         this.ur_name = ur_name;
     }
 
-    public String getUr_image() {
-        return ur_image;
-    }
-
-    public void setUr_image(String ur_image) {
-        this.ur_image = ur_image;
-    }
-
     public String getOther_details() {
         return other_details;
     }
 
     public void setOther_details(String other_details) {
         this.other_details = other_details;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(sno);
+        parcel.writeString(ur_name);
+        parcel.writeString(other_details);
     }
 }

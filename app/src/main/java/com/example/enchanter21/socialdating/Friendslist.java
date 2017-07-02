@@ -2,18 +2,14 @@ package com.example.enchanter21.socialdating;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -72,7 +68,7 @@ public class Friendslist extends AppCompatActivity {
                 convertView = inflater.inflate(resource,null);
                 holder = new ViewHolder();
 
-                holder.primg=(ImageView)convertView.findViewById(R.id.primg);
+              //  holder.primg=(ImageView)convertView.findViewById(R.id.primg);
                 holder.textname=(TextView) convertView.findViewById(R.id.txtnm);
                 holder.textdt=(TextView) convertView.findViewById(R.id.txtdet);
                 convertView.setTag(holder);
@@ -81,14 +77,14 @@ public class Friendslist extends AppCompatActivity {
                 holder = (ViewHolder) convertView.getTag();
             }
             frndslist ccitac=movieModelList.get(position);
-            holder.primg.setImageURI(Uri.parse(ccitac.getUr_image()));
+
             holder.textname.setText(ccitac.getUr_name());
             holder.textdt.setText(ccitac.getOther_details());
             return convertView;
         }
         class ViewHolder{
             public TextView textname,textdt;
-            public ImageView primg;
+
         }
     }
     public class kilomilo extends AsyncTask<String,String, List<frndslist>> {
@@ -141,7 +137,7 @@ public class Friendslist extends AppCompatActivity {
         @Override
         protected void onPostExecute(final List<frndslist> movieMode) {
             super.onPostExecute(movieMode);
-            if (movieMode.size()>0)
+            if (movieMode.size()!=0)
             {
                 MovieAdap adapter = new MovieAdap(getApplicationContext(), R.layout.frndslists, movieMode);
                 list1.setAdapter(adapter);
@@ -168,24 +164,7 @@ public class Friendslist extends AppCompatActivity {
             });
         }
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.activity_homenav_drawer, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-}
+   }
+
 
 
