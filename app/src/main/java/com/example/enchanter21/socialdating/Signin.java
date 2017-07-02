@@ -96,10 +96,10 @@ public class Signin extends AppCompatActivity {
                         JSONObject users = jObj.getJSONObject("user_det");
                         String uname1 = users.getString("ur_mobno");
                         String uage1 = users.getString("ur_pwwd");
-                        Intent intent=new Intent(Signin.this,Homenav.class);
-                        intent.putExtra("ghtw",uname1);
-                        intent.putExtra("sssw",uage1);
-                        startActivity(intent);
+                        Intent intent2=new Intent(Signin.this,Homenav.class);
+                        intent2.putExtra("ghtw",uname1);
+                        intent2.putExtra("sssw",uage1);
+                        startActivity(intent2);
                         //   Toast.makeText(getApplicationContext(),mobile_number,Toast.LENGTH_SHORT).show();
 
                     }
@@ -134,11 +134,4 @@ public class Signin extends AppCompatActivity {
         App_Controller.getInstance().addToRequestQueue(stringRequest);
 
     }
-
-
-
-
-
-
-
 }
