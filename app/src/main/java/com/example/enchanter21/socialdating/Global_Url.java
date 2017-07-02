@@ -6,5 +6,5 @@ package com.example.enchanter21.socialdating;
 
 public class Global_Url {
     public static String URI_CATEGORY="http://24x7shoppers.com/swapna525/android_files/insertpersons.php";
-
+    public static String URI_CATEGORY1="http://24x7shoppers.com/swapna525/android_files/logsin.php";
 }
