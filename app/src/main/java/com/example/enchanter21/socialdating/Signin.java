@@ -12,6 +12,19 @@ import android.transition.Explode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -30,6 +43,7 @@ public class Signin extends AppCompatActivity {
     @InjectView(R.id.fab)
     FloatingActionButton fab;
 
+    String sphone,spass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,16 +75,70 @@ public class Signin extends AppCompatActivity {
                 getWindow().setEnterTransition(explode);
                 ActivityOptionsCompat oc2 = ActivityOptionsCompat.makeSceneTransitionAnimation(this);
 //                Intent i2 = new Intent(this,LoginSuccessActivity.class);
-//                startActivity(i2, oc2.toBundle());
+//         ed1       startActivity(i2, oc2.toBundle());
 
-
-
-                Intent in=new Intent(Signin.this,Homenav.class);
-                startActivity(in);
-
-
+                sphone=etUsername.getText().toString();
+                spass=etPassword.getText().toString();
+                logininto(sphone,spass);
                 break;
         }
     }
+
+    public void logininto(final String sphone1, final String spass1) {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Global_Url.URI_CATEGORY1, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jObj = new JSONObject(response);
+                    boolean abc = jObj.getBoolean("exits");
+                    if (abc)
+                    {
+                        JSONObject users = jObj.getJSONObject("user_det");
+                        String uname1 = users.getString("ur_mobno");
+                        String uage1 = users.getString("ur_pwwd");
+                        Intent intent=new Intent(Signin.this,Homenav.class);
+                        intent.putExtra("ghtw",uname1);
+                        intent.putExtra("sssw",uage1);
+                        startActivity(intent);
+                        //   Toast.makeText(getApplicationContext(),mobile_number,Toast.LENGTH_SHORT).show();
+
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(),"Invalid credentials",Toast.LENGTH_SHORT).show();
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> insert = new HashMap<String, String>();
+                insert.put("ur_mobno", sphone1);
+                insert.put("ur_pwwd", spass1);
+
+                return insert;
+
+            }
+        };
+        App_Controller.getInstance().addToRequestQueue(stringRequest);
+
+    }
+
+
+
+
+
+
 
 }
