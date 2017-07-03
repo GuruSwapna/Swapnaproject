@@ -1,5 +1,6 @@
 package com.example.enchanter21.socialdating;
 
+import android.media.Image;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -11,24 +12,7 @@ public class frndslist  implements Parcelable{
     String sno;
     String ur_name;
     String other_details;
-
-    protected frndslist(Parcel in) {
-        sno = in.readString();
-        ur_name = in.readString();
-        other_details = in.readString();
-    }
-
-    public static final Creator<frndslist> CREATOR = new Creator<frndslist>() {
-        @Override
-        public frndslist createFromParcel(Parcel in) {
-            return new frndslist(in);
-        }
-
-        @Override
-        public frndslist[] newArray(int size) {
-            return new frndslist[size];
-        }
-    };
+    Image image;
 
     public String getSno() {
         return sno;
@@ -53,6 +37,33 @@ public class frndslist  implements Parcelable{
     public void setOther_details(String other_details) {
         this.other_details = other_details;
     }
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
+    protected frndslist(Parcel in) {
+        sno = in.readString();
+        ur_name = in.readString();
+        other_details = in.readString();
+    }
+
+    public static final Creator<frndslist> CREATOR = new Creator<frndslist>() {
+        @Override
+        public frndslist createFromParcel(Parcel in) {
+            return new frndslist(in);
+        }
+
+        @Override
+        public frndslist[] newArray(int size) {
+            return new frndslist[size];
+        }
+    };
+
 
     @Override
     public int describeContents() {

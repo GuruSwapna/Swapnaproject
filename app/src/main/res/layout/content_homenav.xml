@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:text="@string/swipe_left"/>
+        android:text="swipe left to unlike"/>
     <Button
         android:id="@+id/buttonSwipeRight"
         style="?android:attr/borderlessButtonStyle"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text="@string/swipe_right"/>
+        android:text="swipe right to like"/>
 
 
     <link.fls.swipestack.SwipeStack

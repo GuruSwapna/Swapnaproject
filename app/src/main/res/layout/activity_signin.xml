@@ -100,8 +100,8 @@
                     android:stateListAnimator="@drawable/state_list_animator_z"
                     android:layout_width="150dp"
                     android:layout_height="50dp"
-                    android:text="@string/go"
-                    android:textColor="#d3d3d3"
+                    android:text="Login"
+
                     >
                 </Button>
             </RelativeLayout>

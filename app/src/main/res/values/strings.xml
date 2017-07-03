@@ -14,8 +14,8 @@
 
     <string name="swipe_left">Swipe left</string>
     <string name="swipe_right">Swipe right</string>
-    <string name="view_swiped_left">%1$s swiped to left!</string>
-    <string name="view_swiped_right">%1$s swiped to right!</string>
+    <string name="view_swiped_left">%1$s Unliked!</string>
+    <string name="view_swiped_right">%1$s Liked!</string>
 
     <string name="dummy_fab">Fab Test</string>
 

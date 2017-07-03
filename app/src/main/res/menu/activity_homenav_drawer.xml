@@ -26,6 +26,10 @@
             android:id="@+id/nav_vistdprf"
             android:icon="@drawable/ic_supervisor_account_black_24dp"
             android:title="Visited Profiles" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Logout" />
     </group>
 
     <!--<item android:title="Communicate">-->
