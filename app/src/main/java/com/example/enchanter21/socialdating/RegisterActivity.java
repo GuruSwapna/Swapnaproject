@@ -87,7 +87,7 @@ public class RegisterActivity extends AppCompatActivity {
                 });
                 sname=ename.getText().toString();
                 spass=epass1.getText().toString();
-//                epass1.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+//              epass1.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
                 sphn= ephn.getText().toString();
                 sgend=egend.getText().toString();
                 sage=eage.getText().toString();
