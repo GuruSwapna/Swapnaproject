@@ -85,7 +85,6 @@ public class RegisterActivity extends AppCompatActivity {
                         animateRevealClose();
                     }
                 });
-
                 sname=ename.getText().toString();
                 spass=epass1.getText().toString();
 //                epass1.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
@@ -93,7 +92,6 @@ public class RegisterActivity extends AppCompatActivity {
                 sgend=egend.getText().toString();
                 sage=eage.getText().toString();
                 sdets=edets.getText().toString();
-
                 if(sname.isEmpty()||spass.isEmpty()||sphn.isEmpty()||sgend.isEmpty()||sage.isEmpty()||sdets.isEmpty())
                 {
                     makeText(getApplicationContext(),"No field should be empty", Toast.LENGTH_SHORT).show();
