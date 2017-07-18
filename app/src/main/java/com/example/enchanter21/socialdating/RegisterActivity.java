@@ -53,7 +53,6 @@ public class RegisterActivity extends AppCompatActivity {
     @InjectView(R.id.cv_add)
     CardView cvAdd;
     EditText ename,epass1,ephn,egend,eage,edets;
-
     String sname,spass,sphn,sgend,sdets,sage;
     final int CODE_GALLERY_REQUEST=999;
     Button bt1,btupload;
@@ -65,7 +64,6 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         ButterKnife.inject(this);
-
         bt1=(Button)findViewById(R.id.bt_go);
         btupload=(Button)findViewById(R.id.imgbtn);
         ename=(EditText)findViewById(R.id.et_username);
