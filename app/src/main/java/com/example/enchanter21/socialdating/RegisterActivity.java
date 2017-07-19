@@ -268,7 +268,6 @@ public class RegisterActivity extends AppCompatActivity {
 //                        intent1.putExtra("detas3",detas1);
 
                         startActivity(intent1);
-
 //                        makeText(getApplicationContext(),"Welcome\t\t"+nameds1,Toast.LENGTH_SHORT).show();
                         //JSONObject users = jObj.getJSONObject("user_det");
 
